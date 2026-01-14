@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lifebot — Analytics</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div class="brand__text">
+          <div class="brand__title">Lifebot Medical Remote Military</div>
+          <div class="brand__subtitle">COMMAND &amp; CONTROL DASHBOARD</div>
+        </div>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="btn btn--danger" id="btnTelemed" type="button">
+          <i class="fa-solid fa-video"></i>
+          <span class="btn__text">Emergency Telemedicine</span>
+          <span class="btn__sub">Connect to Remote Specialist</span>
+        </button>
+
+        <div class="userchip">
+          <div class="userchip__icon"><i class="fa-regular fa-bell"></i><span class="userchip__badge" id="notifBadge">0</span></div>
+          <div class="userchip__meta">
+            <div class="userchip__name" id="userName">—</div>
+            <div class="userchip__time" id="headerTime">—</div>
+          </div>
+          <div class="statuspill" id="statusPill">
+            <span class="statusdot"></span>
+            <span class="statuspill__text">ONLINE</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Dashboard tabs">
+      <a class="tab" href="../overview/index.html"><i class="fa-regular fa-map"></i><span>Overview</span></a>
+      <a class="tab" href="../dispatch/index.html"><i class="fa-solid fa-truck-fast"></i><span>Dispatch</span></a>
+      <a class="tab" href="../casualties/index.html"><i class="fa-solid fa-user-group"></i><span>Casualties</span></a>
+      <a class="tab" href="../assets/index.html"><i class="fa-solid fa-layer-group"></i><span>Assets</span></a>
+      <a class="tab" href="../hospitals/index.html"><i class="fa-regular fa-hospital"></i><span>Hospitals</span></a>
+      <a class="tab" href="../logistics/index.html"><i class="fa-solid fa-boxes-stacked"></i><span>Logistics</span></a>
+      <a class="tab" href="../personnel/index.html"><i class="fa-solid fa-people-group"></i><span>Personnel</span></a>
+      <a class="tab" href="../messages/index.html"><i class="fa-regular fa-message"></i><span>Messages</span></a>
+      <a class="tab" href="../security/index.html"><i class="fa-solid fa-shield-halved"></i><span>Security</span></a>
+      <a class="tab is-active" href="../analytics/index.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+      <a class="tab" href="../audit/index.html"><i class="fa-regular fa-clipboard"></i><span>Audit</span></a>
+    </nav>
+
+    
+<main style="padding:0 18px 18px">
+  <section class="panel">
+    <div class="panel__head">
+      <div>
+        <div class="panel__title">Analytics</div>
+        <div class="panel__sub">This page is prepared as a separate folder (HTML/CSS/JS/JSON). We will build it later.</div>
+      </div>
+      <span class="pill pill--ok"><i class="fa-solid fa-screwdriver-wrench"></i> Coming Soon</span>
+    </div>
+    <div style="padding:16px">
+      <div class="muted">Ready to customize: edit <b>data.json</b>, then update the UI in <b>app.js</b> and <b>style.css</b>.</div>
+    </div>
+  </section>
+</main>
+
+
+    <footer class="bottombar">
+      <div class="bottombar__left">
+        <span class="pill pill--ok"><i class="fa-solid fa-shield-check"></i> System Operational</span>
+        <span class="muted">Encrypted connection active</span>
+      </div>
+      <div class="bottombar__right">
+        <span class="pill pill--danger"><i class="fa-solid fa-circle-exclamation"></i> Classification: Confidential</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

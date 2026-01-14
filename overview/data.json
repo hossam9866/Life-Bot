@@ -1,0 +1,267 @@
+{
+  "header": {
+    "userName": "Alpha Command",
+    "timestamp": "2025-12-11T11:11:49Z",
+    "notifications": 6,
+    "online": true
+  },
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5,
+    "activeMissions": 2,
+    "openCases": 4,
+    "inProgressCases": 2,
+    "hotZones": 3
+  },
+  "map": {
+    "center": [
+      46.6753,
+      24.7136
+    ],
+    "zoom": 12.8
+  },
+  "assets": [
+    {
+      "id": "A-01",
+      "label": "MedEvac Unit 01",
+      "type": "Ambulance",
+      "status": "deployed",
+      "team": "Echo-1",
+      "etaMin": 7,
+      "coords": {
+        "lat": 24.7201,
+        "lon": 46.6858
+      }
+    },
+    {
+      "id": "A-02",
+      "label": "MedEvac Unit 02",
+      "type": "Ambulance",
+      "status": "available",
+      "team": "Echo-2",
+      "etaMin": 0,
+      "coords": {
+        "lat": 24.7076,
+        "lon": 46.6667
+      }
+    },
+    {
+      "id": "A-03",
+      "label": "Field Medic Team",
+      "type": "Infantry Medic",
+      "status": "deployed",
+      "team": "Foxtrot",
+      "etaMin": 12,
+      "coords": {
+        "lat": 24.7282,
+        "lon": 46.6711
+      }
+    },
+    {
+      "id": "A-04",
+      "label": "Trauma Pod",
+      "type": "Mobile Clinic",
+      "status": "available",
+      "team": "Delta",
+      "etaMin": 0,
+      "coords": {
+        "lat": 24.7165,
+        "lon": 46.699
+      }
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-001",
+      "code": "INC-001",
+      "status": "in progress",
+      "type": "BLAST",
+      "severity": "Critical",
+      "description": "IED explosion near checkpoint Alpha.",
+      "officer": "CPT Johnson",
+      "coords": {
+        "lat": 24.719,
+        "lon": 46.6985
+      },
+      "casualties": {
+        "red": 3,
+        "yellow": 5,
+        "green": 2
+      },
+      "lastUpdateLabel": "15m ago"
+    },
+    {
+      "id": "INC-003",
+      "code": "INC-003",
+      "status": "in progress",
+      "type": "MASCAL",
+      "severity": "High",
+      "description": "Mass casualty event \u2013 convoy ambush.",
+      "officer": "MAJ Williams",
+      "coords": {
+        "lat": 24.7091,
+        "lon": 46.6795
+      },
+      "casualties": {
+        "red": 7,
+        "yellow": 10,
+        "green": 5
+      },
+      "lastUpdateLabel": "1h 30m ago"
+    },
+    {
+      "id": "INC-002",
+      "code": "INC-002",
+      "status": "pending",
+      "type": "GUNSHOT",
+      "severity": "Medium",
+      "description": "Sniper fire casualties \u2013 2 soldiers wounded.",
+      "officer": "LT Davis",
+      "coords": {
+        "lat": 24.73,
+        "lon": 46.664
+      },
+      "casualties": {
+        "red": 0,
+        "yellow": 2,
+        "green": 0
+      },
+      "lastUpdateLabel": "45m ago"
+    },
+    {
+      "id": "INC-004",
+      "code": "INC-004",
+      "status": "in progress",
+      "type": "TRAUMA",
+      "severity": "Low",
+      "description": "Vehicle rollover \u2013 injuries reported.",
+      "officer": "SGT Ramirez",
+      "coords": {
+        "lat": 24.7108,
+        "lon": 46.6545
+      },
+      "casualties": {
+        "red": 0,
+        "yellow": 0,
+        "green": 0
+      },
+      "lastUpdateLabel": "10m ago"
+    }
+  ],
+  "dispatchQueue": [
+    {
+      "id": "INC-001",
+      "code": "INC-001",
+      "status": "in progress",
+      "type": "BLAST",
+      "severity": "Critical",
+      "description": "IED explosion near checkpoint Alpha.",
+      "officer": "CPT Johnson",
+      "coords": {
+        "lat": 24.719,
+        "lon": 46.6985
+      },
+      "casualties": {
+        "red": 3,
+        "yellow": 5,
+        "green": 2
+      },
+      "lastUpdateLabel": "15m ago"
+    },
+    {
+      "id": "INC-003",
+      "code": "INC-003",
+      "status": "in progress",
+      "type": "MASCAL",
+      "severity": "High",
+      "description": "Mass casualty event \u2013 convoy ambush.",
+      "officer": "MAJ Williams",
+      "coords": {
+        "lat": 24.7091,
+        "lon": 46.6795
+      },
+      "casualties": {
+        "red": 7,
+        "yellow": 10,
+        "green": 5
+      },
+      "lastUpdateLabel": "1h 30m ago"
+    },
+    {
+      "id": "INC-002",
+      "code": "INC-002",
+      "status": "pending",
+      "type": "GUNSHOT",
+      "severity": "Medium",
+      "description": "Sniper fire casualties \u2013 2 soldiers wounded.",
+      "officer": "LT Davis",
+      "coords": {
+        "lat": 24.73,
+        "lon": 46.664
+      },
+      "casualties": {
+        "red": 0,
+        "yellow": 2,
+        "green": 0
+      },
+      "lastUpdateLabel": "45m ago"
+    }
+  ],
+  "kpis": {
+    "activeIncidents": {
+      "value": 4,
+      "delta": {
+        "value": 1,
+        "direction": "down",
+        "unit": "%"
+      }
+    },
+    "avgResponseMin": {
+      "value": 8.5,
+      "target": 10,
+      "delta": {
+        "value": 12,
+        "direction": "up",
+        "unit": "%"
+      }
+    },
+    "availableAssets": {
+      "value": 12,
+      "total": 18,
+      "delta": {
+        "value": 5,
+        "direction": "up",
+        "unit": "%"
+      }
+    },
+    "evacSuccessRate": {
+      "value": 98.5,
+      "target": 95,
+      "delta": {
+        "value": 2.1,
+        "direction": "up",
+        "unit": "%"
+      }
+    },
+    "treated24h": {
+      "value": 34,
+      "delta": {
+        "value": 5,
+        "direction": "up",
+        "unit": "%"
+      }
+    },
+    "hospitalBeds": {
+      "value": 34,
+      "total": 130,
+      "delta": {
+        "value": 1.0,
+        "direction": "down",
+        "unit": "%"
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+/* Lifebot Dashboard - Shared Look (per-page copy)
+   Each page is self-contained (html/css/js/json in its own folder).
+*/
+:root{
+  --teal:#64c2b8;
+  --teal-2:#5ab8ae;
+  --bg:#f5f7f9;
+  --card:#ffffff;
+  --line:#e6eaee;
+  --text:#14222b;
+  --muted:#6c7a85;
+  --shadow: 0 8px 24px rgba(16,24,40,.08);
+  --radius:14px;
+
+  --crit:#ff4d4f;
+  --high:#ff8a3d;
+  --med:#ffd14a;
+  --low:#3ccf7e;
+
+  --danger:#ff3b3b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Tajawal", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+.app{min-height:100%; display:flex; flex-direction:column}
+
+/* Top Bar */
+.topbar{
+  background:linear-gradient(90deg,var(--teal), var(--teal-2));
+  color:#fff;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+.brand{display:flex; align-items:center; gap:12px; min-width:260px;}
+.brand__logo{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.18);display:grid;place-items:center;backdrop-filter: blur(8px);}
+.brand__logo i{font-size:18px}
+.brand__title{font-weight:700; letter-spacing:.2px}
+.brand__subtitle{font-size:11px; opacity:.9; letter-spacing:.9px}
+.topbar__actions{display:flex; align-items:center; justify-content:flex-end; gap:14px; flex-wrap:wrap;}
+
+.btn{border:none;border-radius:999px;padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;color:#fff;box-shadow:0 10px 18px rgba(0,0,0,.12);}
+.btn i{font-size:14px}
+.btn--danger{ background:linear-gradient(180deg,#ff4c4c,#e83737); }
+.btn__text{font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.6px}
+.btn__sub{display:block; font-size:11px; opacity:.95; margin-left:2px}
+@media (max-width:680px){ .btn__sub{display:none} .btn__text{text-transform:none;letter-spacing:0;font-weight:700} }
+
+.userchip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 10px;display:flex;align-items:center;gap:10px;backdrop-filter: blur(8px);}
+.userchip__icon{position:relative;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.18);display:grid;place-items:center;}
+.userchip__icon i{font-size:14px}
+.userchip__badge{position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:999px;background:#ff3b3b;display:grid;place-items:center;font-size:10px;font-weight:800;border:2px solid rgba(255,255,255,.55);}
+.userchip__meta{display:flex;flex-direction:column;line-height:1.1}
+.userchip__name{font-weight:700;font-size:12px}
+.userchip__time{font-size:11px;opacity:.9}
+.statuspill{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.22);font-size:11px;font-weight:800;letter-spacing:.6px;}
+.statusdot{width:8px;height:8px;border-radius:99px;background:#3cff8f;box-shadow:0 0 0 4px rgba(60,255,143,.18)}
+.muted{color:var(--muted); font-size:12px}
+
+/* Tabs */
+.tabs{padding:0 18px 12px;display:flex;gap:8px;flex-wrap:wrap;}
+.tab{
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  color:#1b2c36;
+  display:flex;align-items:center;gap:8px;
+  text-decoration:none;
+  transition:transform .06s ease, background .2s ease, border-color .2s ease;
+}
+.tab i{color:#4b5563}
+.tab:hover{transform:translateY(-1px)}
+.tab.is-active{border-color:rgba(20,184,166,.35);background:rgba(20,184,166,.08);}
+.tab.is-active i{color:#0f766e}
+.tab span{white-space:nowrap}
+
+/* Layout */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.panel__head{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.panel__title{font-weight:800}
+.panel__sub{font-size:12px;color:var(--muted);margin-top:2px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;border:1px solid rgba(15,23,42,.08);background:#f8fafc;color:#0f172a;}
+.pill--ok{background:rgba(34,197,94,.10);border-color:rgba(34,197,94,.22);color:#166534}
+.pill--danger{background:rgba(255,59,59,.10);border-color:rgba(255,59,59,.25);color:#b91c1c}
+
+/* Footer */
+.bottombar{margin-top:auto;background:rgba(255,255,255,.75);backdrop-filter: blur(8px);border-top:1px solid var(--line);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+
+/* Page-specific styles can go here */

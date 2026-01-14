@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lifebot — Overview</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__logo" aria-hidden="true">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <div class="brand__text">
+            <div class="brand__title">Lifebot Medical Remote Military</div>
+            <div class="brand__subtitle">COMMAND &amp; CONTROL DASHBOARD</div>
+          </div>
+        </div>
+
+        <div class="topbar__actions">
+          <button class="btn btn--danger" id="btnTelemed" type="button">
+            <i class="fa-solid fa-video"></i>
+            <span class="btn__text">Emergency Telemedicine</span>
+            <span class="btn__sub">Connect to Remote Specialist</span>
+          </button>
+
+          <div class="userchip">
+            <div class="userchip__icon">
+              <i class="fa-regular fa-bell"></i
+              ><span class="userchip__badge" id="notifBadge">0</span>
+            </div>
+            <div class="userchip__meta">
+              <div class="userchip__name" id="userName">—</div>
+              <div class="userchip__time" id="headerTime">—</div>
+            </div>
+            <div class="statuspill" id="statusPill">
+              <span class="statusdot"></span>
+              <span class="statuspill__text">ONLINE</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="summary" aria-label="Summary metrics">
+        <div class="metriccard">
+          <div class="metriccard__icon metriccard__icon--warn">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div class="metriccard__body">
+            <div class="metriccard__label">Active</div>
+            <div class="metriccard__value" id="mActive">—</div>
+            <div class="metriccard__hint">Incidents</div>
+          </div>
+        </div>
+        <div class="metriccard">
+          <div class="metriccard__icon metriccard__icon--blue">
+            <i class="fa-solid fa-truck-medical"></i>
+          </div>
+          <div class="metriccard__body">
+            <div class="metriccard__label">Deployed</div>
+            <div class="metriccard__value" id="mDeployed">—</div>
+            <div class="metriccard__hint">Assets</div>
+          </div>
+        </div>
+        <div class="metriccard">
+          <div class="metriccard__icon metriccard__icon--ok">
+            <i class="fa-solid fa-heart-circle-check"></i>
+          </div>
+          <div class="metriccard__body">
+            <div class="metriccard__label">Available</div>
+            <div class="metriccard__value" id="mAvailable">—</div>
+            <div class="metriccard__hint">Assets</div>
+          </div>
+        </div>
+        <div class="metriccard">
+          <div class="metriccard__icon metriccard__icon--red">
+            <i class="fa-solid fa-user-injured"></i>
+          </div>
+          <div class="metriccard__body">
+            <div class="metriccard__label">Total</div>
+            <div class="metriccard__value" id="mTotal">—</div>
+            <div class="metriccard__hint">Casualties</div>
+          </div>
+        </div>
+        <div class="metriccard">
+          <div class="metriccard__icon metriccard__icon--teal">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="metriccard__body">
+            <div class="metriccard__label">Response</div>
+            <div class="metriccard__value" id="mResponse">—</div>
+            <div class="metriccard__hint">Minutes</div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="tabs" aria-label="Dashboard tabs">
+        <a class="tab is-active" href="../overview/index.html"
+          ><i class="fa-regular fa-map"></i><span>Overview</span></a
+        >
+        <a class="tab" href="../dispatch/index.html"
+          ><i class="fa-solid fa-truck-fast"></i><span>Dispatch</span></a
+        >
+        <a class="tab" href="../casualties/index.html"
+          ><i class="fa-solid fa-user-group"></i><span>Casualties</span></a
+        >
+        <a class="tab" href="../assets/index.html"
+          ><i class="fa-solid fa-layer-group"></i><span>Assets</span></a
+        >
+        <a class="tab" href="../hospitals/index.html"
+          ><i class="fa-regular fa-hospital"></i><span>Hospitals</span></a
+        >
+        <a class="tab" href="../logistics/index.html"
+          ><i class="fa-solid fa-boxes-stacked"></i><span>Logistics</span></a
+        >
+        <a class="tab" href="../personnel/index.html"
+          ><i class="fa-solid fa-people-group"></i><span>Personnel</span></a
+        >
+        <a class="tab" href="../messages/index.html"
+          ><i class="fa-regular fa-message"></i><span>Messages</span></a
+        >
+        <a class="tab" href="../security/index.html"
+          ><i class="fa-solid fa-shield-halved"></i><span>Security</span></a
+        >
+        <a class="tab" href="../analytics/index.html"
+          ><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a
+        >
+        <a class="tab" href="../audit/index.html"
+          ><i class="fa-regular fa-clipboard"></i><span>Audit</span></a
+        >
+      </nav>
+
+      <main class="content" role="main">
+        <section class="panel">
+          <div class="panel__head">
+            <div>
+              <div class="panel__title">Live Incident Map</div>
+              <div class="panel__sub">Real-Time Tactical Visualization</div>
+            </div>
+            <span class="pill pill--ok"
+              ><i class="fa-solid fa-shield-heart"></i> System Operational</span
+            >
+          </div>
+
+          <div class="mapwrap">
+            <div id="viewDiv" class="map"></div>
+
+            <div class="maplegend" aria-label="Map legend">
+              <div class="maplegend__title">Incident Severity</div>
+              <div class="legendrow">
+                <span class="dot dot--crit"></span><span>Critical</span>
+              </div>
+              <div class="legendrow">
+                <span class="dot dot--high"></span><span>High</span>
+              </div>
+              <div class="legendrow">
+                <span class="dot dot--med"></span><span>Medium</span>
+              </div>
+              <div class="legendrow">
+                <span class="dot dot--low"></span><span>Low</span>
+              </div>
+            </div>
+
+            <div class="mapbadge" id="activeMissionsBadge">
+              <div class="mapbadge__num" id="activeMissionsNum">—</div>
+              <div class="mapbadge__label">Active Missions</div>
+            </div>
+
+            <div class="mapstatus" aria-label="Operational status">
+              <div class="mapstatus__title">Operational Status</div>
+              <div class="mapstatus__row">
+                <span>Open Cases</span><strong id="openCases">—</strong>
+              </div>
+              <div class="mapstatus__row">
+                <span>In Progress</span><strong id="inProgress">—</strong>
+              </div>
+              <div class="mapstatus__row">
+                <span>Avg Response</span
+                ><strong><span id="avgResp">—</span> min</strong>
+              </div>
+              <div class="mapstatus__row">
+                <span>Hot Zones</span><strong id="hotZones">—</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="footerline">
+            <span class="pill pill--ok"
+              ><i class="fa-solid fa-lock"></i> Encrypted Connection
+              Active</span
+            >
+            <span class="muted" id="lastUpdate">Last update: —</span>
+          </div>
+        </section>
+
+        <aside class="panel" aria-label="Dispatch queue">
+          <div class="panel__head">
+            <div>
+              <div class="panel__title">Dispatch Queue</div>
+              <div class="panel__sub">
+                <span id="queueActiveCount">—</span> Active Missions
+              </div>
+            </div>
+          </div>
+          <div class="queue" id="queueList" role="list"></div>
+          <div class="queue__hint muted">
+            Tip: click an incident to focus it on the map.
+          </div>
+        </aside>
+      </main>
+
+      <section class="kpis" aria-label="Key performance indicators">
+        <div
+          class="panel__head"
+          style="margin: 0 18px 10px; border-radius: 14px">
+          <div>
+            <div class="panel__title">Key Performance Indicators</div>
+            <div class="panel__sub">Real-Time Operational Metrics</div>
+          </div>
+        </div>
+
+        <div class="kpis__grid">
+          <div class="kpibox kpibox--warm">
+            <div class="kpibox__row">
+              <div class="kpibox__icon"><i class="fa-solid fa-signal"></i></div>
+              <div class="kpibox__meta">
+                <div class="kpibox__label">Active Incidents</div>
+                <div class="kpibox__value" id="kActiveIncidents">—</div>
+              </div>
+              <div class="kpibox__delta" id="dActiveIncidents">—</div>
+            </div>
+          </div>
+
+          <div class="kpibox kpibox--mint">
+            <div class="kpibox__row">
+              <div class="kpibox__icon">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div class="kpibox__meta">
+                <div class="kpibox__label">Avg Response Time</div>
+                <div class="kpibox__value">
+                  <span id="kAvgResponse">—</span> <span class="unit">min</span>
+                </div>
+                <div class="kpibox__hint">
+                  Target: &lt; <span id="kTargetResponse">—</span> min
+                </div>
+              </div>
+              <div class="kpibox__delta" id="dAvgResponse">—</div>
+            </div>
+          </div>
+
+          <div class="kpibox kpibox--warm">
+            <div class="kpibox__row">
+              <div class="kpibox__icon">
+                <i class="fa-solid fa-truck-medical"></i>
+              </div>
+              <div class="kpibox__meta">
+                <div class="kpibox__label">Available Assets</div>
+                <div class="kpibox__value">
+                  <span id="kAvailAssets">—</span>
+                </div>
+              </div>
+              <div class="kpibox__delta" id="dAvailAssets">—</div>
+            </div>
+          </div>
+
+          <div class="kpibox kpibox--mint">
+            <div class="kpibox__row">
+              <div class="kpibox__icon">
+                <i class="fa-solid fa-person-military-pointing"></i>
+              </div>
+              <div class="kpibox__meta">
+                <div class="kpibox__label">Evacuation Success Rate</div>
+                <div class="kpibox__value">
+                  <span id="kEvacRate">—</span><span class="unit">%</span>
+                </div>
+                <div class="kpibox__hint">
+                  Target: &gt; <span id="kTargetEvac">—</span>%
+                </div>
+              </div>
+              <div class="kpibox__delta" id="dEvacRate">—</div>
+            </div>
+          </div>
+
+          <div class="kpibox">
+            <div class="kpibox__row">
+              <div class="kpibox__icon">
+                <i class="fa-solid fa-kit-medical"></i>
+              </div>
+              <div class="kpibox__meta">
+                <div class="kpibox__label">Casualties Treated (24h)</div>
+                <div class="kpibox__value" id="kTreated">—</div>
+              </div>
+              <div class="kpibox__delta" id="dTreated">—</div>
+            </div>
+          </div>
+
+          <div class="kpibox kpibox--warm">
+            <div class="kpibox__row">
+              <div class="kpibox__icon">
+                <i class="fa-regular fa-hospital"></i>
+              </div>
+              <div class="kpibox__meta">
+                <div class="kpibox__label">Hospital Bed Availability</div>
+                <div class="kpibox__value"><span id="kBedsAvail">—</span></div>
+              </div>
+              <div class="kpibox__delta" id="dBedsAvail">—</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bottombar">
+        <div class="bottombar__left">
+          <span class="pill pill--ok"
+            ><i class="fa-solid fa-shield-check"></i> System Operational</span
+          >
+          <span class="muted">Encrypted connection active</span>
+        </div>
+        <div class="bottombar__right">
+          <span class="pill pill--danger"
+            ><i class="fa-solid fa-circle-exclamation"></i> Classification:
+            Confidential</span
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
