@@ -1,12 +1,79 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:14:08Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "dispatch",
-    "title": "Dispatch"
-  }
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "missions": [
+    {
+      "code": "INC-001",
+      "status": "in progress",
+      "type": "BLAST",
+      "severity": "Critical",
+      "description": "IED explosion near checkpoint Alpha",
+      "officer": "CPT Johnson",
+      "coords": { "lat": 24.7136, "lon": 46.6753 },
+      "casualties": { "red": 3, "yellow": 3, "green": 2 },
+      "lastUpdateLabel": "17m ago"
+    },
+    {
+      "code": "INC-003",
+      "status": "in progress",
+      "type": "MASCAL",
+      "severity": "High",
+      "description": "Mass casualty event - convoy ambush",
+      "officer": "MAJ Williams",
+      "coords": { "lat": 24.734, "lon": 46.6802 },
+      "casualties": { "red": 7, "yellow": 10, "green": 5 },
+      "lastUpdateLabel": "1h 32m ago"
+    },
+    {
+      "code": "INC-002",
+      "status": "pending",
+      "type": "GUNSHOT",
+      "severity": "Medium",
+      "description": "Sniper fire casualties - 2 soldiers wounded",
+      "officer": "LT Davis",
+      "coords": { "lat": 24.7021, "lon": 46.6538 },
+      "casualties": { "red": 1, "yellow": 1, "green": 0 },
+      "lastUpdateLabel": "47m ago"
+    }
+  ],
+  "assets": [
+    {
+      "code": "AMB-001",
+      "type": "AMBULANCE",
+      "status": "deployed",
+      "crew": ["SGT Davis", "CPL Wilson"],
+      "equipment": ["AED", "Trauma Kit", "Oxygen", "IV Fluids"],
+      "assignment": { "mission": "INC-001", "etaMin": 8 },
+      "coords": { "lat": 24.72, "lon": 46.68 }
+    },
+    {
+      "code": "AMB-002",
+      "type": "AMBULANCE",
+      "status": "available",
+      "crew": ["SGT Thompson", "CPL Anderson"],
+      "equipment": ["AED", "Trauma Kit", "Oxygen", "Spare Battery"],
+      "assignment": null,
+      "coords": { "lat": 24.689, "lon": 46.6205 }
+    },
+    {
+      "code": "MDEV-001",
+      "type": "MEDEVAC",
+      "status": "deployed",
+      "crew": ["CPT Hale", "LT Brooks"],
+      "equipment": ["Ventilator", "Trauma Kit", "Blood Pack", "Monitor"],
+      "assignment": { "mission": "INC-003", "etaMin": 12 },
+      "coords": { "lat": 24.74, "lon": 46.7 }
+    }
+  ]
 }
