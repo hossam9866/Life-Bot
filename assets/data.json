@@ -1,12 +1,93 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:15:19Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "assets",
-    "title": "Assets"
-  }
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "assets": [
+    {
+      "group": "ground",
+      "code": "AMB-001",
+      "type": "AMBULANCE",
+      "status": "deployed",
+      "crew": ["SGT Davis", "CPL Wilson"],
+      "assignment": { "mission": "INC-001", "etaMin": 8 },
+      "equipment": ["AED", "Trauma Kit", "Oxygen", "IV Fluids"],
+      "coords": { "lat": 24.72, "lon": 46.68 }
+    },
+    {
+      "group": "ground",
+      "code": "AMB-002",
+      "type": "AMBULANCE",
+      "status": "available",
+      "crew": ["SGT Thompson", "CPL Anderson"],
+      "assignment": null,
+      "equipment": ["AED", "Trauma Kit", "Oxygen", "Spare Battery"],
+      "coords": { "lat": 24.7216, "lon": 46.6805 }
+    },
+    {
+      "group": "ground",
+      "code": "MED-001",
+      "type": "FIELD MEDIC",
+      "status": "deployed",
+      "crew": ["CPL Harris"],
+      "assignment": { "mission": "INC-003", "etaMin": 6 },
+      "equipment": ["Trauma Kit", "Tourniquet", "IV Kit", "Pain Control"],
+      "coords": { "lat": 24.7132, "lon": 46.6722 }
+    },
+
+    {
+      "group": "air",
+      "code": "MDEV-001",
+      "type": "MEDEVAC",
+      "status": "deployed",
+      "crew": ["CPT Rogers", "LT Hayes", "SGT Mitchell", "CPL Turner"],
+      "assignment": { "mission": "INC-002", "etaMin": 12 },
+      "equipment": [
+        "Full Surgical Kit",
+        "Blood Supply",
+        "Ventilator",
+        "Monitor"
+      ],
+      "coords": { "lat": 24.75, "lon": 46.72 }
+    },
+    {
+      "group": "air",
+      "code": "MDEV-002",
+      "type": "MEDEVAC",
+      "status": "available",
+      "crew": ["CPT Blake", "LT Parker", "SGT Adams", "CPL Lee"],
+      "assignment": null,
+      "equipment": [
+        "Full Surgical Kit",
+        "Blood Supply",
+        "Ventilator",
+        "Monitor"
+      ],
+      "coords": { "lat": 24.7467, "lon": 46.7116 }
+    },
+    {
+      "group": "air",
+      "code": "UAV-001",
+      "type": "UAV",
+      "status": "available",
+      "crew": ["OPR Singh"],
+      "assignment": null,
+      "equipment": [
+        "Thermal Camera",
+        "Encrypted Uplink",
+        "Range Extender",
+        "Spare Battery"
+      ],
+      "coords": { "lat": 24.7405, "lon": 46.705 }
+    }
+  ]
 }

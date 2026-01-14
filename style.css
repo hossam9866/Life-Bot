@@ -1,0 +1,12 @@
+@media (max-width: 687px) {
+  .topbar {
+    flex-direction: column;
+  }
+  .topbar__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+}

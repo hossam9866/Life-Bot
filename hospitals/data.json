@@ -1,12 +1,69 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:15:40Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "hospitals",
-    "title": "Hospitals"
-  }
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "readinessStats": [
+    { "label": "TOTAL FACILITIES", "value": "2", "sub": "", "color": "teal" },
+    {
+      "label": "TOTAL ICU BEDS",
+      "value": "10",
+      "sub": "Available",
+      "color": "blue"
+    },
+    {
+      "label": "OR AVAILABILITY",
+      "value": "0",
+      "sub": "Rooms",
+      "color": "green"
+    },
+    { "label": "BLOOD UNITS", "value": "141", "sub": "Units", "color": "red" },
+    {
+      "label": "ISOLATION BEDS",
+      "value": "13",
+      "sub": "Available",
+      "color": "purple"
+    },
+    { "label": "READY STATUS", "value": "0", "sub": "Green", "color": "green" }
+  ],
+  "facilities": [
+    {
+      "id": "HOSP-FOB-001",
+      "name": "Forward Operating Base Medical Center",
+      "role": "Role 3",
+      "type": "Main Operating Base",
+      "capacity": { "used": 38, "total": 50 },
+      "icu": { "used": 3, "total": 10 },
+      "operatingRooms": { "available": 0 },
+      "blood": {
+        "total": 54,
+        "groups": [
+          { "type": "O+", "value": 15 },
+          { "type": "O-", "value": 3 },
+          { "type": "A+", "value": 10 },
+          { "type": "A-", "value": 2 },
+          { "type": "B+", "value": 7 },
+          { "type": "B-", "value": 1 },
+          { "type": "AB+", "value": 4 },
+          { "type": "AB-", "value": 2 }
+        ]
+      },
+      "specialists": { "available": 3 },
+      "equipment": [
+        { "name": "CT Scanner", "state": "Ready" },
+        { "name": "MRI", "state": "Offline" },
+        { "name": "X-Ray", "state": "Ready" }
+      ],
+      "capabilities": ["Trauma Surgery", "ICU", "Emergency", "Blood Bank"]
+    }
+  ]
 }

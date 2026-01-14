@@ -1,12 +1,65 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:14:51Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "casualties",
-    "title": "Casualties"
-  }
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "patients": [
+    {
+      "id": "CAS-001",
+      "code": "CAS-001",
+      "triage": "immediate",
+      "incidentCode": "INC-001",
+      "age": 28,
+      "sex": "Male",
+      "blood": "O+",
+      "notes": "Multiple shrapnel wounds, possible internal bleeding",
+      "transportStatus": "in_transit",
+      "assignedAsset": "AMB-001",
+      "etaMin": 8,
+      "targetHospital": "HOSP-001",
+      "stabilizationMin": 22,
+      "vitals": { "hr": 125, "bp": "90/60", "spo2": 88, "tempC": 37.2 }
+    },
+    {
+      "id": "CAS-002",
+      "code": "CAS-002",
+      "triage": "delayed",
+      "incidentCode": "INC-001",
+      "age": 31,
+      "sex": "Male",
+      "blood": "A+",
+      "notes": "Lacerations and moderate bleeding, responsive",
+      "transportStatus": "awaiting_transport",
+      "assignedAsset": null,
+      "etaMin": null,
+      "targetHospital": null,
+      "stabilizationMin": 28,
+      "vitals": { "hr": 98, "bp": "110/70", "spo2": 95, "tempC": 36.8 }
+    },
+    {
+      "id": "CAS-003",
+      "code": "CAS-003",
+      "triage": "minimal",
+      "incidentCode": "INC-003",
+      "age": 24,
+      "sex": "Male",
+      "blood": "B+",
+      "notes": "Minor trauma, ambulatory, pain managed",
+      "transportStatus": "in_transit",
+      "assignedAsset": "AMB-002",
+      "etaMin": 14,
+      "targetHospital": "HOSP-002",
+      "stabilizationMin": 31,
+      "vitals": { "hr": 86, "bp": "120/80", "spo2": 97, "tempC": 36.7 }
+    }
+  ]
 }

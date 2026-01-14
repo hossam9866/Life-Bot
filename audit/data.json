@@ -1,12 +1,234 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:18:52Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "audit",
-    "title": "Audit"
-  }
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "categories": {
+    "defaultKey": "all",
+    "items": [
+      {
+        "key": "all",
+        "label": "ALL LOGS",
+        "count": 10,
+        "icon": "fa-regular fa-file-lines"
+      },
+      {
+        "key": "mission",
+        "label": "MISSION LOGS",
+        "count": 2,
+        "icon": "fa-solid fa-wave-square"
+      },
+      {
+        "key": "communication",
+        "label": "COMMUNICATION LOGS",
+        "count": 2,
+        "icon": "fa-regular fa-message"
+      },
+      {
+        "key": "medical",
+        "label": "MEDICAL INTERVENTION",
+        "count": 2,
+        "icon": "fa-solid fa-heart-pulse"
+      },
+      {
+        "key": "chain",
+        "label": "CHAIN OF COMMAND",
+        "count": 1,
+        "icon": "fa-solid fa-shield-halved"
+      },
+      {
+        "key": "closure",
+        "label": "INCIDENT CLOSURES",
+        "count": 1,
+        "icon": "fa-regular fa-circle-check"
+      },
+      {
+        "key": "legal",
+        "label": "LEGAL/FORENSIC",
+        "count": 2,
+        "icon": "fa-solid fa-scale-balanced"
+      }
+    ]
+  },
+  "reports": [
+    {
+      "id": "INC-004",
+      "type": "all",
+      "pills": [
+        {
+          "type": "closed",
+          "text": "CLOSED",
+          "icon": "fa-regular fa-circle-check"
+        },
+        {
+          "type": "verified",
+          "text": "VERIFIED",
+          "icon": "fa-solid fa-shield-check"
+        },
+        {
+          "type": "legal",
+          "text": "LEGAL REVIEW",
+          "icon": "fa-regular fa-file-lines"
+        }
+      ],
+      "casualties": "1 Total (1 Evac, 0 KIA)",
+      "duration": "42 minutes",
+      "closedBy": "CPT Johnson",
+      "closedAt": "07:11 AM",
+      "afterAction": "Single cardiac emergency casualty successfully stabilized and evacuated to King Faisal Hospital. Response time: 6 minutes. Patient stable upon handoff. No complications during transport.",
+      "cmd": "JOHNSON.CPT.20251210.1020Z",
+      "med": "BROWN.SGT.20251210.1020Z"
+    },
+    {
+      "id": "INC-005",
+      "type": "all",
+      "pills": [
+        {
+          "type": "closed",
+          "text": "CLOSED",
+          "icon": "fa-regular fa-circle-check"
+        },
+        {
+          "type": "verified",
+          "text": "VERIFIED",
+          "icon": "fa-solid fa-shield-check"
+        }
+      ],
+      "casualties": "3 Total (3 Evac, 0 KIA)",
+      "duration": "68 minutes",
+      "closedBy": "LT Martinez",
+      "closedAt": "08:11 AM",
+      "afterAction": "Multiple trauma casualties triaged and evacuated. Two ambulances deployed, one returned to base. Stabilization successful with no escalation during transit.",
+      "cmd": "MARTINEZ.LT.20251210.1130Z",
+      "med": "DAVIS.SGT.20251210.1130Z"
+    },
+
+    {
+      "id": "MIS-102",
+      "type": "mission",
+      "pills": [
+        {
+          "type": "verified",
+          "text": "VERIFIED",
+          "icon": "fa-solid fa-shield-check"
+        }
+      ],
+      "casualties": "—",
+      "duration": "—",
+      "closedBy": "Ops Control",
+      "closedAt": "09:22 AM",
+      "afterAction": "Mission log created: convoy escort to sector Bravo. Assets check-in complete. No incident escalation.",
+      "cmd": "OPS.CTRL.20251211.0922Z",
+      "med": "—"
+    },
+
+    {
+      "id": "COM-771",
+      "type": "communication",
+      "pills": [
+        {
+          "type": "verified",
+          "text": "VERIFIED",
+          "icon": "fa-solid fa-shield-check"
+        }
+      ],
+      "casualties": "—",
+      "duration": "—",
+      "closedBy": "Signal Unit",
+      "closedAt": "10:03 AM",
+      "afterAction": "Encrypted comms audit: uplink jitter resolved; fallback channel verified; incident thread archived.",
+      "cmd": "SIGNAL.UNIT.20251211.1003Z",
+      "med": "—"
+    },
+
+    {
+      "id": "MED-220",
+      "type": "medical",
+      "pills": [
+        {
+          "type": "verified",
+          "text": "VERIFIED",
+          "icon": "fa-solid fa-shield-check"
+        }
+      ],
+      "casualties": "—",
+      "duration": "—",
+      "closedBy": "Medical Officer",
+      "closedAt": "10:41 AM",
+      "afterAction": "Medical intervention logged: medication administered, vitals monitored, transport decision recorded. Documentation complete.",
+      "cmd": "MED.OFFICER.20251211.1041Z",
+      "med": "—"
+    },
+
+    {
+      "id": "COC-019",
+      "type": "chain",
+      "pills": [
+        {
+          "type": "verified",
+          "text": "VERIFIED",
+          "icon": "fa-solid fa-shield-check"
+        }
+      ],
+      "casualties": "—",
+      "duration": "—",
+      "closedBy": "Command",
+      "closedAt": "11:02 AM",
+      "afterAction": "Chain-of-command log: authority transfer confirmed; role assignments updated; access scope verified.",
+      "cmd": "ALPHA.CMD.20251211.1102Z",
+      "med": "—"
+    },
+
+    {
+      "id": "CLS-301",
+      "type": "closure",
+      "pills": [
+        {
+          "type": "closed",
+          "text": "CLOSED",
+          "icon": "fa-regular fa-circle-check"
+        },
+        {
+          "type": "verified",
+          "text": "VERIFIED",
+          "icon": "fa-solid fa-shield-check"
+        }
+      ],
+      "casualties": "—",
+      "duration": "—",
+      "closedBy": "Ops Review",
+      "closedAt": "11:10 AM",
+      "afterAction": "Incident closure review completed. All associated items linked; evidence archived; audit trail sealed.",
+      "cmd": "OPS.REVIEW.20251211.1110Z",
+      "med": "—"
+    },
+
+    {
+      "id": "LEG-882",
+      "type": "legal",
+      "pills": [
+        {
+          "type": "legal",
+          "text": "LEGAL REVIEW",
+          "icon": "fa-solid fa-scale-balanced"
+        }
+      ],
+      "casualties": "—",
+      "duration": "—",
+      "closedBy": "Legal Office",
+      "closedAt": "11:16 AM",
+      "afterAction": "Forensic record created: incident references collected; attachments hashed; access logged for compliance review.",
+      "cmd": "LEGAL.OFFICE.20251211.1116Z",
+      "med": "—"
+    }
+  ]
 }

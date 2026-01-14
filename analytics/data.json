@@ -1,12 +1,299 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:18:19Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "analytics",
-    "title": "Analytics"
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "analytics": {
+    "defaultRange": "7d",
+    "ranges": {
+      "24h": {
+        "kpis": [
+          {
+            "title": "Avg Response Time",
+            "icon": "fa-regular fa-clock",
+            "value": "8.9 min",
+            "delta": "+4.2%",
+            "metaLeft": "Best: 6.1 min",
+            "metaRight": "Worst: 15.8 min",
+            "dot": true
+          },
+          {
+            "title": "Evacuation Success Rate",
+            "icon": "fa-solid fa-heart-pulse",
+            "value": "95.2%",
+            "delta": "+1.1%",
+            "metaLeft": "Successful: 84",
+            "metaRight": "Failed: 4",
+            "dot": true
+          },
+          {
+            "title": "Overall Survival Rate",
+            "icon": "fa-solid fa-shield-heart",
+            "value": "88.1%",
+            "delta": "+0.8%",
+            "metaLeft": "Survived: 119",
+            "metaRight": "Total: 135",
+            "dot": true
+          },
+          {
+            "title": "Operational Efficiency",
+            "icon": "fa-solid fa-bullseye",
+            "value": "83.2/100",
+            "progress": 83,
+            "metaLeft": "Score",
+            "metaRight": "",
+            "dot": false
+          }
+        ],
+        "responseTrend": {
+          "labels": ["00", "04", "08", "12", "16", "20", "24"],
+          "values": [10.2, 9.0, 9.4, 8.1, 8.6, 9.7, 8.9],
+          "target": 9.5
+        },
+        "incidentVolume": {
+          "labels": ["00", "04", "08", "12", "16", "20", "24"],
+          "incidents": [12, 8, 15, 22, 18, 14, 10],
+          "evacuations": [8, 6, 11, 18, 15, 10, 7]
+        },
+        "triage": [
+          { "label": "RED", "color": "red", "count": 18, "percent": 28 },
+          { "label": "YELLOW", "color": "yellow", "count": 26, "percent": 40 },
+          { "label": "GREEN", "color": "green", "count": 17, "percent": 26 },
+          { "label": "BLACK", "color": "black", "count": 4, "percent": 6 }
+        ],
+        "utilization": [
+          { "name": "Ground Ambulances", "percent": 71 },
+          { "name": "MEDEVAC Helicopters", "percent": 79 },
+          { "name": "Field Medical Teams", "percent": 88 },
+          { "name": "UAV Support", "percent": 60 }
+        ],
+        "mission": [
+          { "label": "Total Missions", "value": "96", "delta": "+4.2%" },
+          { "label": "Completed", "value": "83", "delta": "+3.6%" },
+          { "label": "In Progress", "value": "6", "delta": "+1.1%" },
+          { "label": "Success Rate", "value": "91.7%", "delta": "+1.8%" },
+          { "label": "Avg Duration", "value": "46 min", "delta": "-2.0%" }
+        ]
+      },
+
+      "7d": {
+        "kpis": [
+          {
+            "title": "Avg Response Time",
+            "icon": "fa-regular fa-clock",
+            "value": "8.4 min",
+            "delta": "+12.5%",
+            "metaLeft": "Best: 4.2 min",
+            "metaRight": "Worst: 15.8 min",
+            "dot": true
+          },
+          {
+            "title": "Evacuation Success Rate",
+            "icon": "fa-solid fa-heart-pulse",
+            "value": "96.8%",
+            "delta": "+2.0%",
+            "metaLeft": "Successful: 506",
+            "metaRight": "Failed: 17",
+            "dot": true
+          },
+          {
+            "title": "Overall Survival Rate",
+            "icon": "fa-solid fa-shield-heart",
+            "value": "89.8%",
+            "delta": "+1.4%",
+            "metaLeft": "Survived: 885",
+            "metaRight": "Total: 985",
+            "dot": true
+          },
+          {
+            "title": "Operational Efficiency",
+            "icon": "fa-solid fa-bullseye",
+            "value": "86.5/100",
+            "progress": 86.5,
+            "metaLeft": "Score",
+            "metaRight": "",
+            "dot": false
+          }
+        ],
+        "responseTrend": {
+          "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          "values": [9.6, 8.2, 8.5, 7.4, 8.1, 9.0, 7.8],
+          "target": 9.0
+        },
+        "incidentVolume": {
+          "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          "incidents": [12, 8, 15, 22, 18, 14, 10],
+          "evacuations": [8, 6, 11, 18, 15, 10, 7]
+        },
+        "triage": [
+          { "label": "RED", "color": "red", "count": 45, "percent": 23 },
+          { "label": "YELLOW", "color": "yellow", "count": 82, "percent": 42 },
+          { "label": "GREEN", "color": "green", "count": 58, "percent": 30 },
+          { "label": "BLACK", "color": "black", "count": 10, "percent": 5 }
+        ],
+        "utilization": [
+          { "name": "Ground Ambulances", "percent": 78 },
+          { "name": "MEDEVAC Helicopters", "percent": 85 },
+          { "name": "Field Medical Teams", "percent": 92 },
+          { "name": "UAV Support", "percent": 65 }
+        ],
+        "mission": [
+          { "label": "Total Missions", "value": "328", "delta": "+12%" },
+          { "label": "Completed", "value": "312", "delta": "+8%" },
+          { "label": "In Progress", "value": "16", "delta": "+5%" },
+          { "label": "Success Rate", "value": "95.1%", "delta": "+2.3%" },
+          { "label": "Avg Duration", "value": "42 min", "delta": "-8%" }
+        ]
+      },
+
+      "30d": {
+        "kpis": [
+          {
+            "title": "Avg Response Time",
+            "icon": "fa-regular fa-clock",
+            "value": "8.1 min",
+            "delta": "+6.1%",
+            "metaLeft": "Best: 3.8 min",
+            "metaRight": "Worst: 16.4 min",
+            "dot": true
+          },
+          {
+            "title": "Evacuation Success Rate",
+            "icon": "fa-solid fa-heart-pulse",
+            "value": "97.4%",
+            "delta": "+1.2%",
+            "metaLeft": "Successful: 1,982",
+            "metaRight": "Failed: 53",
+            "dot": true
+          },
+          {
+            "title": "Overall Survival Rate",
+            "icon": "fa-solid fa-shield-heart",
+            "value": "90.6%",
+            "delta": "+0.9%",
+            "metaLeft": "Survived: 3,511",
+            "metaRight": "Total: 3,877",
+            "dot": true
+          },
+          {
+            "title": "Operational Efficiency",
+            "icon": "fa-solid fa-bullseye",
+            "value": "87.9/100",
+            "progress": 88,
+            "metaLeft": "Score",
+            "metaRight": "",
+            "dot": false
+          }
+        ],
+        "responseTrend": {
+          "labels": ["W1", "W2", "W3", "W4"],
+          "values": [8.7, 8.1, 7.9, 8.0],
+          "target": 9.0
+        },
+        "incidentVolume": {
+          "labels": ["W1", "W2", "W3", "W4"],
+          "incidents": [68, 74, 80, 71],
+          "evacuations": [52, 58, 63, 55]
+        },
+        "triage": [
+          { "label": "RED", "color": "red", "count": 160, "percent": 21 },
+          { "label": "YELLOW", "color": "yellow", "count": 330, "percent": 44 },
+          { "label": "GREEN", "color": "green", "count": 240, "percent": 32 },
+          { "label": "BLACK", "color": "black", "count": 25, "percent": 3 }
+        ],
+        "utilization": [
+          { "name": "Ground Ambulances", "percent": 76 },
+          { "name": "MEDEVAC Helicopters", "percent": 84 },
+          { "name": "Field Medical Teams", "percent": 90 },
+          { "name": "UAV Support", "percent": 68 }
+        ],
+        "mission": [
+          { "label": "Total Missions", "value": "1,280", "delta": "+7%" },
+          { "label": "Completed", "value": "1,214", "delta": "+6%" },
+          { "label": "In Progress", "value": "66", "delta": "+3%" },
+          { "label": "Success Rate", "value": "94.8%", "delta": "+1.1%" },
+          { "label": "Avg Duration", "value": "44 min", "delta": "-4%" }
+        ]
+      },
+
+      "90d": {
+        "kpis": [
+          {
+            "title": "Avg Response Time",
+            "icon": "fa-regular fa-clock",
+            "value": "8.0 min",
+            "delta": "+3.4%",
+            "metaLeft": "Best: 3.6 min",
+            "metaRight": "Worst: 17.2 min",
+            "dot": true
+          },
+          {
+            "title": "Evacuation Success Rate",
+            "icon": "fa-solid fa-heart-pulse",
+            "value": "97.9%",
+            "delta": "+0.8%",
+            "metaLeft": "Successful: 5,910",
+            "metaRight": "Failed: 128",
+            "dot": true
+          },
+          {
+            "title": "Overall Survival Rate",
+            "icon": "fa-solid fa-shield-heart",
+            "value": "91.2%",
+            "delta": "+0.6%",
+            "metaLeft": "Survived: 10,830",
+            "metaRight": "Total: 11,876",
+            "dot": true
+          },
+          {
+            "title": "Operational Efficiency",
+            "icon": "fa-solid fa-bullseye",
+            "value": "88.6/100",
+            "progress": 89,
+            "metaLeft": "Score",
+            "metaRight": "",
+            "dot": false
+          }
+        ],
+        "responseTrend": {
+          "labels": ["M1", "M2", "M3"],
+          "values": [8.2, 7.9, 7.8],
+          "target": 9.0
+        },
+        "incidentVolume": {
+          "labels": ["M1", "M2", "M3"],
+          "incidents": [230, 252, 245],
+          "evacuations": [182, 195, 190]
+        },
+        "triage": [
+          { "label": "RED", "color": "red", "count": 420, "percent": 20 },
+          { "label": "YELLOW", "color": "yellow", "count": 980, "percent": 47 },
+          { "label": "GREEN", "color": "green", "count": 650, "percent": 31 },
+          { "label": "BLACK", "color": "black", "count": 55, "percent": 2 }
+        ],
+        "utilization": [
+          { "name": "Ground Ambulances", "percent": 77 },
+          { "name": "MEDEVAC Helicopters", "percent": 86 },
+          { "name": "Field Medical Teams", "percent": 93 },
+          { "name": "UAV Support", "percent": 70 }
+        ],
+        "mission": [
+          { "label": "Total Missions", "value": "3,840", "delta": "+4%" },
+          { "label": "Completed", "value": "3,720", "delta": "+4%" },
+          { "label": "In Progress", "value": "120", "delta": "+2%" },
+          { "label": "Success Rate", "value": "95.4%", "delta": "+0.9%" },
+          { "label": "Avg Duration", "value": "43 min", "delta": "-3%" }
+        ]
+      }
+    }
   }
 }

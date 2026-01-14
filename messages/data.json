@@ -1,12 +1,158 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:17:20Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "messages",
-    "title": "Messages"
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "messaging": {
+    "newCount": 3,
+    "channels": [
+      { "key": "all", "label": "All Messages" },
+      { "key": "direct", "label": "Direct" },
+      { "key": "unit", "label": "Unit" },
+      { "key": "broadcast", "label": "Broadcast" }
+    ],
+    "feed": [
+      {
+        "id": "MSG-001",
+        "channel": "direct",
+        "from": "SGT Thompson",
+        "to": "LT Martinez",
+        "tag": "URGENT",
+        "tone": "blue",
+        "text": "Blood bank running low on O- type. Request emergency resupply.",
+        "time": "11:08:49 AM"
+      },
+      {
+        "id": "MSG-002",
+        "channel": "unit",
+        "from": "SGT Garcia (UNIT-0)",
+        "to": "CPT OI",
+        "tag": "FLASH",
+        "tone": "blue",
+        "text": "INC-003 mass casualty — requesting immediate air support and additional medics.",
+        "time": "11:06:49 AM"
+      },
+      {
+        "id": "MSG-003",
+        "channel": "unit",
+        "from": "SGT Davis (UNIT-0)",
+        "to": "CPT Johnson",
+        "tag": "PRIORITY",
+        "tone": "white",
+        "text": "CAS-001 vitals stabilizing. Ready for MEDEVAC in 5 minutes.",
+        "time": "11:03:49 AM"
+      },
+      {
+        "id": "MSG-004",
+        "channel": "direct",
+        "from": "TO: SGT Davis",
+        "to": "—",
+        "tag": "PRIORITY",
+        "tone": "white",
+        "text": "What is the status of CAS-001?",
+        "time": "11:01:12 AM"
+      }
+    ],
+    "templates": [
+      {
+        "title": "CASEVAC Request",
+        "badge": "URGENT",
+        "body": "Request immediate CASEVAC for [CASUALTY_ID]. Triage: [TRIAGE_LEVEL]. Location: [COORDINATES].",
+        "tags": ["medical"]
+      },
+      {
+        "title": "Status Update",
+        "badge": "ROUTINE",
+        "body": "Status update: [UNIT_ID] - [STATUS]. Personnel: [COUNT]. Location: [LOCATION].",
+        "tags": ["tactical"]
+      },
+      {
+        "title": "Supply Request",
+        "badge": "PRIORITY",
+        "body": "Urgent supply request: [SUPPLY_ITEM] x [QUANTITY]. Deliver to [LOCATION].",
+        "tags": ["logistics"]
+      },
+      {
+        "title": "Mass Casualty Alert",
+        "badge": "FLASH",
+        "body": "MASCAL ALERT: Incident [INCIDENT]. Location: [LOCATION]. All available medics respond.",
+        "tags": ["tactical", "medical"]
+      }
+    ],
+    "activeUnits": [
+      { "name": "Alpha Medical Team", "role": "FIELD RESPONSE" },
+      { "name": "Bravo MEDEVAC Squadron", "role": "AIR SUPPORT" }
+    ]
+  },
+  "evidence": {
+    "stats": [
+      { "label": "TOTAL", "value": 12, "color": "" },
+      { "label": "PHOTOS", "value": 3, "color": "blue" },
+      { "label": "VIDEOS", "value": 4, "color": "purple" },
+      { "label": "DOCUMENTS", "value": 5, "color": "" },
+      { "label": "PENDING", "value": 2, "color": "orange" },
+      { "label": "FLAGGED", "value": 1, "color": "red" }
+    ],
+    "items": [
+      {
+        "id": "EV-001",
+        "type": "document",
+        "fileName": "CAS-001_field_assessment.pdf",
+        "description": "Complete field medical assessment and treatment documentation",
+        "incident": "INC-001",
+        "casualty": "CAS-001",
+        "owner": "SGT Davis",
+        "size": "1.2 MB",
+        "datetime": "12/11/2025, 11:01:49 AM",
+        "tags": [
+          "Medical Report",
+          "Reviewed",
+          "Confidential",
+          "vital signs",
+          "treatment protocol",
+          "triage decision"
+        ]
+      },
+      {
+        "id": "EV-002",
+        "type": "photo",
+        "fileName": "casualty_wounds_documentation_001.jpg",
+        "description": "Photographic documentation of shrapnel wounds for medical record",
+        "incident": "INC-001",
+        "casualty": "CAS-001",
+        "owner": "SGT Davis",
+        "size": "1.8 MB",
+        "datetime": "12/11/2025, 10:58:49 AM",
+        "tags": [
+          "Photo",
+          "Reviewed",
+          "Confidential",
+          "wound documentation",
+          "shrapnel injuries",
+          "medical evidence"
+        ]
+      },
+      {
+        "id": "EV-003",
+        "type": "photo",
+        "fileName": "INC-001_scene_overview.jpg",
+        "description": "Overview of blast site showing casualty positions and debris field",
+        "incident": "INC-001",
+        "casualty": "—",
+        "owner": "UNIT-0",
+        "size": "2.4 MB",
+        "datetime": "12/11/2025, 10:55:12 AM",
+        "tags": ["Photo", "Confidential", "scene overview", "GPS reference"]
+      }
+    ]
   }
 }

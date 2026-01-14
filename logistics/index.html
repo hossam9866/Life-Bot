@@ -1,85 +1,266 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lifebot — Logistics</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-  <div class="app">
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand__logo" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></div>
-        <div class="brand__text">
-          <div class="brand__title">Lifebot Medical Remote Military</div>
-          <div class="brand__subtitle">COMMAND &amp; CONTROL DASHBOARD</div>
-        </div>
-      </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lifebot — Logistics</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
 
-      <div class="topbar__actions">
-        <button class="btn btn--danger" id="btnTelemed" type="button">
-          <i class="fa-solid fa-video"></i>
-          <span class="btn__text">Emergency Telemedicine</span>
-          <span class="btn__sub">Connect to Remote Specialist</span>
-        </button>
-
-        <div class="userchip">
-          <div class="userchip__icon"><i class="fa-regular fa-bell"></i><span class="userchip__badge" id="notifBadge">0</span></div>
-          <div class="userchip__meta">
-            <div class="userchip__name" id="userName">—</div>
-            <div class="userchip__time" id="headerTime">—</div>
+  <body>
+    <div class="app">
+      <!-- Top Bar -->
+      <header class="topbar">
+        <div class="brand">
+          <div
+            style="background-color: white"
+            class="brand__logo"
+            aria-hidden="true">
+            <img src="../assets/images/Icon.svg" alt="" />
           </div>
-          <div class="statuspill" id="statusPill">
-            <span class="statusdot"></span>
-            <span class="statuspill__text">ONLINE</span>
+          <div class="brand__text">
+            <div class="brand__title">Lifebot Medical Remote Military</div>
+            <div class="brand__subtitle">COMMAND &amp; CONTROL DASHBOARD</div>
           </div>
         </div>
-      </div>
-    </header>
 
-    <nav class="tabs" aria-label="Dashboard tabs">
-      <a class="tab" href="../overview/index.html"><i class="fa-regular fa-map"></i><span>Overview</span></a>
-      <a class="tab" href="../dispatch/index.html"><i class="fa-solid fa-truck-fast"></i><span>Dispatch</span></a>
-      <a class="tab" href="../casualties/index.html"><i class="fa-solid fa-user-group"></i><span>Casualties</span></a>
-      <a class="tab" href="../assets/index.html"><i class="fa-solid fa-layer-group"></i><span>Assets</span></a>
-      <a class="tab" href="../hospitals/index.html"><i class="fa-regular fa-hospital"></i><span>Hospitals</span></a>
-      <a class="tab is-active" href="../logistics/index.html"><i class="fa-solid fa-boxes-stacked"></i><span>Logistics</span></a>
-      <a class="tab" href="../personnel/index.html"><i class="fa-solid fa-people-group"></i><span>Personnel</span></a>
-      <a class="tab" href="../messages/index.html"><i class="fa-regular fa-message"></i><span>Messages</span></a>
-      <a class="tab" href="../security/index.html"><i class="fa-solid fa-shield-halved"></i><span>Security</span></a>
-      <a class="tab" href="../analytics/index.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
-      <a class="tab" href="../audit/index.html"><i class="fa-regular fa-clipboard"></i><span>Audit</span></a>
-    </nav>
+        <div class="topbar__actions">
+          <button class="btn btn--danger" id="btnTelemed" type="button">
+            <i class="fa-solid fa-video"></i>
+            <span class="btn__text">EMERGENCY TELEMEDICINE</span>
+            <span class="btn__sub">Connect to Remote Specialist</span>
+          </button>
 
-    
-<main style="padding:0 18px 18px">
-  <section class="panel">
-    <div class="panel__head">
-      <div>
-        <div class="panel__title">Logistics</div>
-        <div class="panel__sub">This page is prepared as a separate folder (HTML/CSS/JS/JSON). We will build it later.</div>
-      </div>
-      <span class="pill pill--ok"><i class="fa-solid fa-screwdriver-wrench"></i> Coming Soon</span>
+          <div class="userchip">
+            <div class="userchip__icon">
+              <i class="fa-regular fa-bell"></i>
+              <span class="userchip__badge" id="notifBadge">0</span>
+            </div>
+            <div class="userchip__meta">
+              <div class="userchip__name" id="userName">—</div>
+              <div class="userchip__time" id="headerTime">—</div>
+            </div>
+            <div class="statuspill">
+              <span class="statusdot"></span>
+              <span class="statuspill__text">ONLINE</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="summary" aria-label="Summary metrics">
+        <div class="metric">
+          <div class="metric__icon metric__icon--warn">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div class="metric__body">
+            <div class="metric__label">ACTIVE</div>
+            <div class="metric__value" id="mActive">—</div>
+            <div class="metric__hint">Incidents</div>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric__icon metric__icon--blue">
+            <i class="fa-solid fa-truck-medical"></i>
+          </div>
+          <div class="metric__body">
+            <div class="metric__label">DEPLOYED</div>
+            <div class="metric__value" id="mDeployed">—</div>
+            <div class="metric__hint">Assets</div>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric__icon metric__icon--ok">
+            <i class="fa-solid fa-heart-circle-check"></i>
+          </div>
+          <div class="metric__body">
+            <div class="metric__label">AVAILABLE</div>
+            <div class="metric__value" id="mAvailable">—</div>
+            <div class="metric__hint">Assets</div>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric__icon metric__icon--red">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="metric__body">
+            <div class="metric__label">TOTAL</div>
+            <div class="metric__value" id="mTotal">—</div>
+            <div class="metric__hint">Casualties</div>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric__icon metric__icon--teal">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="metric__body">
+            <div class="metric__label">RESPONSE</div>
+            <div class="metric__value" id="mResponse">—</div>
+            <div class="metric__hint">Minutes</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+      <nav class="tabs" aria-label="Dashboard tabs">
+        <a class="tab" href="../overview/index.html"
+          ><i class="fa-regular fa-map"></i><span>OVERVIEW</span></a
+        >
+        <a class="tab" href="../dispatch/index.html"
+          ><i class="fa-solid fa-truck-fast"></i><span>DISPATCH</span></a
+        >
+        <a class="tab" href="../casualties/index.html"
+          ><i class="fa-solid fa-user-group"></i><span>CASUALTIES</span></a
+        >
+        <a class="tab" href="../assets/index.html"
+          ><i class="fa-solid fa-layer-group"></i><span>ASSETS</span></a
+        >
+        <a class="tab" href="../hospitals/index.html"
+          ><i class="fa-regular fa-hospital"></i><span>HOSPITALS</span></a
+        >
+        <a class="tab is-active" href="../logistics/index.html"
+          ><i class="fa-solid fa-boxes-stacked"></i><span>LOGISTICS</span></a
+        >
+        <a class="tab" href="../personnel/index.html"
+          ><i class="fa-solid fa-people-group"></i><span>PERSONNEL</span></a
+        >
+        <a class="tab" href="../messages/index.html"
+          ><i class="fa-regular fa-message"></i><span>MESSAGES</span></a
+        >
+        <a class="tab" href="../security/index.html"
+          ><i class="fa-solid fa-shield-halved"></i><span>SECURITY</span></a
+        >
+        <a class="tab" href="../analytics/index.html"
+          ><i class="fa-solid fa-chart-line"></i><span>ANALYTICS</span></a
+        >
+        <a class="tab" href="../audit/index.html"
+          ><i class="fa-regular fa-clipboard"></i><span>AUDIT</span></a
+        >
+      </nav>
+
+      <!-- Main -->
+      <main class="main">
+        <section class="panel">
+          <div class="panel__head">
+            <div>
+              <div class="panel__title">
+                <span class="headbar"></span>Supply Chain &amp; Medical
+                Logistics
+              </div>
+              <div class="panel__sub">Inventory Tracking · Stock Alerts</div>
+            </div>
+          </div>
+
+          <!-- Inner header card -->
+          <div class="innerCard">
+            <div class="innerTop">
+              <div class="innerIcon"><i class="fa-solid fa-cube"></i></div>
+              <div class="innerText">
+                <div class="innerTitle">
+                  Supply Chain &amp; Medical Logistics
+                </div>
+                <div class="innerSub">
+                  Real-time inventory tracking and supply chain management
+                </div>
+              </div>
+
+              <div class="innerActions">
+                <button class="btnGhost" id="btnExport">
+                  <i class="fa-solid fa-arrow-down-to-line"></i> EXPORT
+                </button>
+                <button class="btnPrimary" id="btnResupply">
+                  REQUEST RESUPPLY
+                </button>
+              </div>
+            </div>
+
+            <div class="toolbar">
+              <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="q" type="text" placeholder="Search supplies..." />
+              </div>
+
+              <div class="filters" role="tablist" aria-label="Category filters">
+                <button class="pill is-active" data-filter="all" type="button">
+                  All
+                </button>
+                <button class="pill" data-filter="trauma" type="button">
+                  Trauma
+                </button>
+                <button class="pill" data-filter="drugs" type="button">
+                  Drugs
+                </button>
+                <button class="pill" data-filter="equipment" type="button">
+                  Equipment
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI Cards Row -->
+          <div class="kpis" id="kpiRow"></div>
+
+          <!-- Active stock alerts -->
+          <div class="alertsCard">
+            <div class="alertsHead">
+              <div class="alertsTitle">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Active Stock Alerts</span>
+                <span class="alertsCount" id="alertsCount">(0)</span>
+              </div>
+            </div>
+            <div class="alertsBody" id="alertsList"></div>
+          </div>
+
+          <!-- Inventory Table -->
+          <div class="tableCard">
+            <div class="tableWrap">
+              <table class="tbl" aria-label="Inventory table">
+                <thead>
+                  <tr>
+                    <th style="width: 38%">Item</th>
+                    <th style="width: 18%">Category</th>
+                    <th style="width: 18%">Location</th>
+                    <th style="width: 10%">Qty</th>
+                    <th style="width: 10%">Min</th>
+                    <th style="width: 6%">Status</th>
+                    <th style="width: 10%"></th>
+                  </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel__pad"></div>
+        </section>
+      </main>
+
+      <!-- Bottom Bar -->
+      <footer class="bottombar">
+        <div class="bottombar__left">
+          <span class="pillSys pillSys--ok"
+            ><i class="fa-solid fa-shield-check"></i> SYSTEM OPERATIONAL</span
+          >
+          <span class="muted">ENCRYPTED CONNECTION ACTIVE</span>
+          <span class="muted" id="lastUpdate">LAST UPDATE: —</span>
+        </div>
+
+        <div class="bottombar__right">
+          <span class="pillSys pillSys--danger"
+            ><i class="fa-solid fa-circle-exclamation"></i> CLASSIFICATION:
+            CONFIDENTIAL</span
+          >
+        </div>
+      </footer>
     </div>
-    <div style="padding:16px">
-      <div class="muted">Ready to customize: edit <b>data.json</b>, then update the UI in <b>app.js</b> and <b>style.css</b>.</div>
-    </div>
-  </section>
-</main>
 
-
-    <footer class="bottombar">
-      <div class="bottombar__left">
-        <span class="pill pill--ok"><i class="fa-solid fa-shield-check"></i> System Operational</span>
-        <span class="muted">Encrypted connection active</span>
-      </div>
-      <div class="bottombar__right">
-        <span class="pill pill--danger"><i class="fa-solid fa-circle-exclamation"></i> Classification: Confidential</span>
-      </div>
-    </footer>
-  </div>
-
-  <script src="./app.js"></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>

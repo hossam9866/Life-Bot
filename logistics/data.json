@@ -1,12 +1,106 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:16:12Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "logistics",
-    "title": "Logistics"
-  }
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "kpis": [
+    {
+      "label": "TOTAL ITEMS",
+      "value": "872",
+      "valueColor": "#0f172a",
+      "trend": { "text": "+124 this week", "color": "green" },
+      "sub": ""
+    },
+    {
+      "label": "LOW STOCK ALERTS",
+      "value": "3",
+      "valueColor": "#dc2626",
+      "trend": { "text": "", "color": "red" },
+      "sub": "Requires attention"
+    },
+    {
+      "label": "EXPIRING SOON",
+      "value": "25",
+      "valueColor": "#d97706",
+      "trend": { "text": "", "color": "orange" },
+      "sub": "Within 30 days"
+    },
+    {
+      "label": "TOTAL VALUE",
+      "value": "$87K",
+      "valueColor": "#0f172a",
+      "trend": { "text": "", "color": "green" },
+      "sub": "Current inventory"
+    }
+  ],
+  "alerts": [
+    "LOW: IV Fluid Pack - 85 units (Min: 100)",
+    "LOW: Fentanyl 100mcg - 75 units (Min: 80)",
+    "LOW: Blood O- - 22 units (Min: 30)",
+    "EXPIRY: Trauma Kit (MARCH) - 3 units expiring in 30 days",
+    "EXPIRY: Individual First Aid Kit (IFAK) - 8 units expiring in 30 days",
+    "EXPIRY: Burn Treatment Kit - 2 units expiring in 30 days",
+    "EXPIRY: IV Fluid Resuscitation Kit - 12 units expiring in 30 days"
+  ],
+  "items": [
+    {
+      "id": "INV-001",
+      "name": "Trauma Kit",
+      "sku": "TK-TRAUMA-01",
+      "category": "trauma",
+      "location": "Main Depot",
+      "qty": 45,
+      "min": 30,
+      "status": "ok"
+    },
+    {
+      "id": "INV-002",
+      "name": "IV Fluid Pack",
+      "sku": "IVF-500ML",
+      "category": "trauma",
+      "location": "Forward Cache A",
+      "qty": 85,
+      "min": 100,
+      "status": "low"
+    },
+    {
+      "id": "INV-003",
+      "name": "Fentanyl 100mcg",
+      "sku": "DRG-FEN-100",
+      "category": "drugs",
+      "location": "Pharmacy Unit",
+      "qty": 75,
+      "min": 80,
+      "status": "low"
+    },
+    {
+      "id": "INV-004",
+      "name": "Portable Ventilator",
+      "sku": "EQP-VENT-02",
+      "category": "equipment",
+      "location": "Field ICU",
+      "qty": 12,
+      "min": 8,
+      "status": "ok"
+    },
+    {
+      "id": "INV-005",
+      "name": "Blood O-",
+      "sku": "BLD-O-",
+      "category": "drugs",
+      "location": "Blood Bank",
+      "qty": 22,
+      "min": 30,
+      "status": "low"
+    }
+  ]
 }

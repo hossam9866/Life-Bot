@@ -1,12 +1,71 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:17:46Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "security",
-    "title": "Security"
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "security": {
+    "stats": [
+      { "label": "ACTIVE THREATS", "value": 2, "color": "red" },
+      { "label": "CONFLICT ZONES", "value": 0, "color": "orange" },
+      { "label": "NO-FLY ZONES", "value": 1, "color": "blue" },
+      { "label": "MINEFIELD ALERTS", "value": 1, "color": "orange" },
+      { "label": "COMM STATUS", "value": "3/4", "color": "green" },
+      { "label": "CYBER THREATS", "value": 2, "color": "purple" }
+    ],
+    "regions": [
+      {
+        "name": "Forward Operating Base Alpha",
+        "level": "YELLOW",
+        "levelColor": "yellow",
+        "description": "Elevated threat · Increased hostile activity in sector",
+        "lastUpdate": "01:35 AM"
+      },
+      {
+        "name": "Main Operating Base",
+        "level": "GREEN",
+        "levelColor": "green",
+        "description": "Normal operations · No significant threats detected",
+        "lastUpdate": "02:12 AM"
+      },
+      {
+        "name": "Combat Outpost Echo",
+        "level": "ORANGE",
+        "levelColor": "orange",
+        "description": "High threat · Active engagement expected within 24 hours",
+        "lastUpdate": "12:45 AM"
+      }
+    ],
+    "alerts": [
+      {
+        "code": "THR-003",
+        "severity": "CRITICAL",
+        "type": "MINEFIELD",
+        "description": "Unconfirmed minefield detection near eastern perimeter. Avoid sector until cleared.",
+        "when": "4h ago"
+      },
+      {
+        "code": "THR-004",
+        "severity": "HIGH",
+        "type": "NO-FLY",
+        "description": "Temporary no-fly corridor activated due to hostile drone presence.",
+        "when": "6h ago"
+      },
+      {
+        "code": "THR-006",
+        "severity": "MEDIUM",
+        "type": "CYBER",
+        "description": "Multiple failed authentication attempts detected across comm nodes.",
+        "when": "9h ago"
+      }
+    ]
   }
 }

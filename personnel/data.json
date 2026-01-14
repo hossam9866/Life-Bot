@@ -1,12 +1,44 @@
 {
   "header": {
     "userName": "Alpha Command",
-    "timestamp": "2025-12-11T11:11:49Z",
+    "timestamp": "2025-12-11T11:16:39Z",
     "notifications": 6,
     "online": true
   },
-  "page": {
-    "slug": "personnel",
-    "title": "Personnel"
-  }
+  "summary": {
+    "activeIncidents": 4,
+    "deployedAssets": 3,
+    "availableAssets": 3,
+    "totalCasualties": 34,
+    "avgResponseMin": 8.5
+  },
+  "people": [
+    {
+      "id": "PER-001",
+      "name": "SGT Davis",
+      "role": "COMBAT MEDIC",
+      "status": "Deployed",
+      "assignment": "AMBU-001",
+      "fatigue": 35,
+      "certs": ["EMT-B", "TCCC", "ACLS"]
+    },
+    {
+      "id": "PER-002",
+      "name": "CPT Johnson",
+      "role": "TRAUMA SURGEON",
+      "status": "On Duty",
+      "assignment": "",
+      "fatigue": 20,
+      "certs": ["MD", "ATLS", "Board Certified"]
+    },
+    {
+      "id": "PER-003",
+      "name": "SGT Garcia",
+      "role": "FIELD MEDIC",
+      "status": "Deployed",
+      "assignment": "MED-001",
+      "fatigue": 65,
+      "certs": ["EMT", "TCCC", "PHTLS"]
+    }
+  ]
 }
